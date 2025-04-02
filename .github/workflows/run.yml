@@ -1,0 +1,16 @@
+name: Keep Codespace Running
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Runs every 30 minutes
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run the script
+        run: |
+          echo "Running script..."
+          python script.py  # Replace with your actual command

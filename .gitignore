@@ -1,0 +1,4 @@
+.env
+challenges.json
+__pycache__/
+.venv/
